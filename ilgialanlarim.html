@@ -6,12 +6,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
+    <script src="js/anime.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/style.css">
-    <title>Şehrim</title>
+    <link rel="stylesheet" href="css/ilgialanlarim.css">
+    <title>İlgi Alanlarım</title>
   </head>
   <body>
     <!--Menü Başlangıç-->
@@ -36,7 +37,7 @@
               <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
+              <a class="nav-link active" aria-current="page" href="ilgialanlarim.html">İlgi Alanlarım</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="iletisim.html">İletişim</a>
@@ -50,27 +51,17 @@
     </div>
     <!--Menü Bitiş-->
 
-    <!--Sehrim Başlangıç-->
+    <!--İlgiAlanlarım Başlangıç-->
     <section class="p5 text-center iletisim">
-      <h1 class="iletisimBaslik">ÇUHALLI PLAJI</h1>
+      <h1 class="iletisimBaslik">İLGİ ALANLARIM</h2>
       <hr class="ayrac">
-      <div class="container">
-        <img src="img/cuhalli.jpg" alt="" class="image">
-        <P>
-            Akçakoca ilçesinde bulunan Çuhallı Plajı, burada yer alan en yoğun plajıdır.
-			Mavi bayrak ödüllü plajın çevresinde yiyecek-içecek ve sosyal tesisler bulunuyor olup plaj ve su sporları yapmak için oldukça elverişlidir.
-			Akçakoca’da yer alan diğer tüm plajlarda olduğu gibi burada da dünyanın nadir kumlarından biri olan siyah inci bulunuyor.
-			Temiz ve berrak suyun keyfini çıkartabilir, hemen yanı başındaki Ankara Büyükşehir Belediyesi tarafından yaptırılmış olan park bulunuyor.
-			Parkın içerisinde yürüyüş parkurları, çocuk oyun noktaları ve piknik yapabileceğiniz alanlar bulunuyor.</P><br><br>
-        <!--Google Map başlangıç-->
-    <div class="map-responsive container haritaSlider">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.042969372022!2d31.14026041541658!3d41.08990777929264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409db23252f27a7d%3A0x2e893bd5024683c3!2zw4d1aGFsbMSxIFBsYWrEsQ!5e0!3m2!1str!2str!4v1619949081537!5m2!1str!2str" width="" height="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-     </div>
-      </div>
+      <h2>Favori Anime Karakterlerim</h2><br>
+        <div id="app" class="row">
+        </div>
     </section>
-    <!--Şehrim Bitiş-->
-      <!--Footer Başlangıç-->
+    <!--İlgiAlanlarım Bitiş-->
 
+      <!--Footer Başlangıç-->
       <div class="footer">
         <p>
           <span>
