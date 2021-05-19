@@ -1,3 +1,9 @@
+<?php 
+
+require 'baglan.php';
+
+?>
+
 <!doctype html>
 <html>
 
@@ -8,18 +14,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <script src="js/validation.js"></script>
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.css">
-  <title>Şehrim</title>
+  <title>İletişim</title>
 </head>
 
 <body>
+
   <!--Menü Başlangıç-->
   <div id="social">
-    <nav class="navbar navbar-dark bg-dark fixed-top">
+    <nav class="navbar  navbar-dark bg-dark fixed-top">
       <a class="navbar-brand navBaslik" href="index.html">DÜZCE | Mehmetali Demirtaş</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +52,7 @@
             <a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="iletisim.html">İletişim</a>
+            <a class="nav-link active" aria-current="page" href="iletisim.html">İletişim</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">Login</a>
@@ -54,26 +63,44 @@
   </div>
   <!--Menü Bitiş-->
 
-  <!--Derebalık Başlangıç-->
+
+  <!--Form Başlangıç-->
   <section class="p5 text-center iletisim">
-    <h1 class="iletisimBaslik">DEREBALIK YAYLASI</h1>
+    <h1 class="iletisimBaslik">İLETİŞİM</h1>
     <hr class="ayrac">
-    <div class="container">
-      <img src="img/derebalik.jpg" alt="" class="image">
-      <P>
-        Aydınpınar Köyü içerisinde yer alan Derebalık Yaylası, 1400 metre rakıma sahip olup 12 hektarlık bir alana
-        sahiptir. Yaylada; çadır kurabilir, piknik yapabilir, atla gezintiye çıkabilir, trekking yapabilir, dağcılık ve
-        dağ bisikleti seçeneklerinden yararlanabilirsiniz.
-      </P><br><br>
-      <!--Google Map başlangıç-->
-      <div class="map-responsive container haritaSlider">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6051.376958987395!2d31.0914432!3d40.6808324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d7eb32030235d%3A0xa08fbf41703be48a!2zRGVyZWJhbMSxayBZYXlsYXPEsQ!5e0!3m2!1str!2str!4v1619948167729!5m2!1str!2str"
-          width="" height="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
+    <div class="container" id="error_message">
+      <form action="iletisimGonder.php" method="post" onsubmit="return validation()" class="col-md-10 text-left m-auto">
+        <div class="form-group row">
+          <label for="" class="col-md-4 align-self-center">Ad:</label>
+          <input type="text" class="form-control col-md-8" id="firstName" name="firstName">
+        </div>
+        <div class="form-group row">
+          <label for="" class="col-md-4 align-self-center">Soyad:</label>
+          <input type="text" class="form-control col-md-8" id="lastName" name="lastName">
+        </div>
+        <div class="form-group row">
+          <label for="" class="col-md-4 align-self-center">Email:</label>
+          <input type="email" id="email" name="email" class="form-control col-md-8">
+        </div>
+        <div class="form-group row">
+          <label for="" class="col-md-4 align-self-center">Mesajınız:</label>
+          <textarea name="message" id="message" cols="30" rows="10" class="form-control col-md-8"></textarea>
+        </div>
+        <div class="form-group row">
+          <button type="reset" class="col-md-4 btn btn-primary buton">Temizle</button>
+          <button type="submit" name="gonder" class="col-md-4 btn btn-primary buton">Gönder</button>
+        </div>
+      </form>
+      <hr>
     </div>
   </section>
-  <!--Derebalık Bitiş-->
+  <!--Form bitiş-->
+  <!--Google Map başlangıç-->
+  <div class="map-responsive container harita">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48285.625400687364!2d31.117579122642958!3d40.8531821271413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409da01b6536d421%3A0xe1d0a622568cf8d7!2zRMO8emNlLCBEw7x6Y2UgTWVya2V6L0TDvHpjZQ!5e0!3m2!1str!2str!4v1619388247809!5m2!1str!2str"
+      width="" height="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
   <!--Footer Başlangıç-->
 
   <div class="footer">
@@ -88,7 +115,6 @@
   </div>
 
   <!--Footer Bitiş-->
-
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

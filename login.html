@@ -1,3 +1,9 @@
+<?php 
+
+require 'baglan.php';
+
+?>
+
 <!doctype html>
 <html>
 
@@ -13,10 +19,11 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.css">
-  <title>Şehrim</title>
+  <title>Login</title>
 </head>
 
 <body>
+
   <!--Menü Başlangıç-->
   <div id="social">
     <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -46,7 +53,7 @@
             <a class="nav-link" href="iletisim.html">İletişim</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
           </li>
         </ul>
       </div>
@@ -54,26 +61,47 @@
   </div>
   <!--Menü Bitiş-->
 
-  <!--Derebalık Başlangıç-->
+  <!--Form Başlangıç-->
   <section class="p5 text-center iletisim">
-    <h1 class="iletisimBaslik">DEREBALIK YAYLASI</h1>
-    <hr class="ayrac">
-    <div class="container">
-      <img src="img/derebalik.jpg" alt="" class="image">
-      <P>
-        Aydınpınar Köyü içerisinde yer alan Derebalık Yaylası, 1400 metre rakıma sahip olup 12 hektarlık bir alana
-        sahiptir. Yaylada; çadır kurabilir, piknik yapabilir, atla gezintiye çıkabilir, trekking yapabilir, dağcılık ve
-        dağ bisikleti seçeneklerinden yararlanabilirsiniz.
-      </P><br><br>
-      <!--Google Map başlangıç-->
-      <div class="map-responsive container haritaSlider">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6051.376958987395!2d31.0914432!3d40.6808324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d7eb32030235d%3A0xa08fbf41703be48a!2zRGVyZWJhbMSxayBZYXlsYXPEsQ!5e0!3m2!1str!2str!4v1619948167729!5m2!1str!2str"
-          width="" height="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <h1 class="iletisimBaslik">KULLANICI GİRİŞİ</h1>
+    <hr class="ayrac"><br>
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <div class="login-form">
+          <!--login form-->
+          <h2>Giriş yapın</h2><br>
+          <form action="islem.php" method="post">
+            <input type="email" name="email" placeholder="Kullanıcı Adı" required id="login-name"
+              class="login-field" />
+            <input type="password" name="password" placeholder="Parola" />
+            <button href="" name="giris" type="submit" class="btn btn-default">Giriş</button>
+          </form>
+        </div>
       </div>
+      <div class="col-lg-4"></div>
     </div>
+    <br><br><br>
+
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <div class="signup-form">
+          <h2>Üye olun</h2><br>
+          <form action="islem.php" method="post">
+            <input type="email" name="email" required placeholder="Kullanıcı Adı" />
+            <input type="password" name="password" placeholder="Parola" />
+            <input type="password" name="password_again" placeholder="Parola Tekrar" />
+            <button href="kayit.php" type="submit" class="btn btn-default" name="kayit">Kayıt ol</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+
   </section>
-  <!--Derebalık Bitiş-->
+  <!--Form bitiş-->
+
   <!--Footer Başlangıç-->
 
   <div class="footer">
@@ -88,7 +116,6 @@
   </div>
 
   <!--Footer Bitiş-->
-
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

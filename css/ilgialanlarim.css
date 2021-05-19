@@ -1,0 +1,10 @@
+.card{
+    background-color: rgba(134, 102, 102, 0.027);
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(36, 2, 2, 0.308);
+}
+.card-image{
+    transition: transform .2s;
+    padding: 1px;
+    border-radius: 5px;
+}
