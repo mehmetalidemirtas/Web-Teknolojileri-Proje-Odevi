@@ -15,8 +15,7 @@ if(isset($_POST['kayit'])){
     ]);
     $say = $kullanici_sor->rowCount();
 
-    if($say==1){
-        $_SESSION['email']=$email;
+    if($say==1){        
         echo "Kullanıcı zaten var";
         header('Refresh:2, login.html');
     }elseif(!$email){
@@ -35,6 +34,7 @@ if(isset($_POST['kayit'])){
             $email, $password
         ]);
         if($ekle){
+			$_SESSION["user"]=$email;
             echo "Kayıt başarıyla gerçekleşti, yönlendiriliyorsunuz";
             header('Refresh:2, panel.php');
         }else{

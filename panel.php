@@ -63,7 +63,7 @@
               <th>İsim</th>
               <th>Soyisim</th>
               <th>Email</th>
-              <th>Mesaj</th>
+              <th>Mesaj</th>			  
             </tr>
             <?php
               session_start();
