@@ -248,20 +248,17 @@ summary {
     padding: 10px;
 }
 
-/* Giriş Css*/
 #form {
     display: block;
-    margin-bottom: 185px;
-    margin-top: 185px;
+    margin-bottom: 190px;
+    margin-top: 190px;
     overflow: hidden;
 }
-
 
 .login-form form input,
 .signup-form form input {
     background: #F0F0E9;
     border: medium none;
-    color: #696763;
     display: block;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -273,47 +270,16 @@ summary {
     width: 100%;
 }
 
-
-.login-form form button {
-    margin-top: 23px;
-}
-
 .login-form form button,
 .signup-form form button {
     background: #0b0d83;
+    margin-top: 22px;
     border: medium none;
     border-radius: 0;
-    color: #FFFFFF;
+    color: #ffffff;
     display: block;
-    font-family: 'Roboto', sans-serif;
     padding: 6px 25px;
 }
-
-
-
-.login-form label input {
-    border: medium none;
-    display: inline-block;
-    height: 0;
-    margin-bottom: 0;
-    outline: medium none;
-    padding-left: 0;
-}
-
-
-.or {
-    background: #FE980F;
-    border-radius: 40px;
-    color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 75px;
-    text-align: center;
-    width: 50px;
-}
-
 
 @media only screen and (min-width:150px) and (max-width:900px) {
     .slider {
@@ -353,8 +319,13 @@ summary {
         width: 100%;
     }
 
-    .imageee {
-        height: 500px;
+    .imageBook {
+        height: 350px;
+    }
+
+    .imageFilm {
+        height: 230px;
+        width: 100%;
     }
 }
 
@@ -389,5 +360,13 @@ summary {
 
     .haritaSlider {
         width: 100%;
+    }
+
+    .imageBook {
+        height: 500px;
+    }
+
+    .imageFilm {
+        height: 350px;
     }
 }
